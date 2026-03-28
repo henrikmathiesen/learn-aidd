@@ -11,6 +11,8 @@ export type SourceQuestion = {
   options: FourChoices;
   /** Index into `options` for the single correct choice (before any shuffle). */
   correctIndex: ChoiceIndex;
+  /** Optional ChatGPT-style prompt when the learner misses this question (used on imperfect score cards). */
+  reviewPrompt?: string;
 };
 
 export type SessionQuestion = {
@@ -18,6 +20,7 @@ export type SessionQuestion = {
   prompt: string;
   options: FourChoices;
   correctIndex: ChoiceIndex;
+  reviewPrompt?: string;
 };
 
 export type QuizModule = {

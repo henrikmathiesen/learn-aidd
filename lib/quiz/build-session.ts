@@ -17,6 +17,7 @@ export const buildSessionQuestions = (
       prompt: q.prompt,
       options,
       correctIndex,
+      reviewPrompt: q.reviewPrompt,
     };
   });
 };

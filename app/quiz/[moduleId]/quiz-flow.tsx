@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
 import { buildSessionQuestions, questionsPerModule } from "@/lib/quiz/build-session";
+import { resolveChatgptPromptsForResults } from "@/lib/quiz/resolve-chatgpt-prompts";
 import type { AnswerRecord, QuizModule } from "@/lib/quiz/types";
 
 type Phase = "explainer" | "question" | "results";
@@ -68,6 +69,11 @@ export function QuizFlow({ module }: { module: QuizModule }) {
 
   const correctCount = answers.filter((a) => a.isCorrect).length;
   const wrongAnswers = answers.filter((a) => !a.isCorrect);
+  const isPerfectScore = correctCount === questionsPerModule && answers.length === questionsPerModule;
+  const chatgptPromptsToShow =
+    phase === "results" && answers.length === questionsPerModule
+      ? resolveChatgptPromptsForResults(module, sessionQuestions, answers)
+      : module.chatgptPrompts;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
@@ -217,8 +223,7 @@ export function QuizFlow({ module }: { module: QuizModule }) {
               </h2>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
                 {wrongAnswers.length} question{wrongAnswers.length === 1 ? "" : "s"} missed — use the prompts below
-                to go deeper. Only your picks are shown (not the keyed answer), so you can practice without spoilers
-                in the UI.
+                to go deeper. Only your picks are shown (not the correct answer).
               </p>
               <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-800 dark:text-zinc-200">
                 {wrongAnswers.map((a) => {
@@ -243,11 +248,13 @@ export function QuizFlow({ module }: { module: QuizModule }) {
               Suggested ChatGPT prompts
             </h2>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              Copy any prompt into ChatGPT (or another assistant) to keep learning in your own words.
+              {isPerfectScore
+                ? "Copy any prompt into ChatGPT (or another assistant) to keep learning in your own words."
+                : "These lead with ideas tied to questions you missed; any open slots are filled from the general module list. Copy into ChatGPT (or another assistant) to go deeper."}
             </p>
             <ul className="mt-4 space-y-3">
-              {module.chatgptPrompts.map((text) => (
-                <li key={text}>
+              {chatgptPromptsToShow.map((text, i) => (
+                <li key={`${i}-${text.slice(0, 48)}`}>
                   <blockquote className="rounded-xl border border-dashed border-zinc-300 bg-white p-4 text-sm leading-relaxed text-zinc-800 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-200">
                     {text}
                   </blockquote>

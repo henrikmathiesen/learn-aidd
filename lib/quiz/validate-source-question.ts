@@ -16,6 +16,9 @@ export const validateSourceQuestion = (q: SourceQuestion, context = q.id): void 
   if (q.correctIndex < 0 || q.correctIndex > 3 || !Number.isInteger(q.correctIndex)) {
     throw new Error(`[${context}] correctIndex must be 0, 1, 2, or 3`);
   }
+  if (q.reviewPrompt !== undefined && q.reviewPrompt.trim().length === 0) {
+    throw new Error(`[${context}] reviewPrompt must be non-empty when set`);
+  }
 };
 
 export const validateQuestionPool = (pool: readonly SourceQuestion[], poolName: string): void => {
