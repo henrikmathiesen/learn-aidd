@@ -1,0 +1,202 @@
+import type { SourceQuestion } from "../types";
+
+export const uxCopyQuestions: SourceQuestion[] = [
+  {
+    id: "ux-1",
+    prompt: "Microcopy on a destructive action should usually…",
+    options: [
+      "Use vague language to soften the blow",
+      "Be explicit about consequences and the action name",
+      "Hide the real outcome until after confirmation",
+      "Always use humor only",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-2",
+    prompt: "Active voice in UI strings tends to…",
+    options: [
+      "Make actors and next steps clearer",
+      "Always require more words",
+      "Be forbidden in enterprise apps",
+      "Replace headings",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-3",
+    prompt: "A strong empty state should…",
+    options: [
+      "Be blank to reduce clutter",
+      "Explain what happened and offer a next step",
+      "Use only Lorem ipsum",
+      "Redirect immediately without explanation",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-4",
+    prompt: "Error messages are more helpful when they…",
+    options: [
+      "Only say “Something went wrong”",
+      "Say what failed in human terms and suggest recovery",
+      "Blame the user",
+      "Use internal error codes only",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-5",
+    prompt: "Consistency in terminology across a product…",
+    options: [
+      "Reduces cognitive load",
+      "Requires identical visuals everywhere",
+      "Is optional for B2B",
+      "Forbids localization",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-6",
+    prompt: "“Sign in” vs “Log in” primarily illustrates…",
+    options: [
+      "That one is always legally required",
+      "Choosing one term and applying it consistently",
+      "That buttons cannot verbs",
+      "That UX writing ignores grammar",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-7",
+    prompt: "Progressive disclosure aims to…",
+    options: [
+      "Hide everything until checkout",
+      "Show essentials first and reveal complexity as needed",
+      "Remove help text entirely",
+      "Always show all fields at once",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-8",
+    prompt: "Calls to action (CTAs) work best when they…",
+    options: [
+      "Use generic labels like “Click here”",
+      "Start with verbs and describe the outcome",
+      "Are always sentence case only",
+      "Never include nouns",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-9",
+    prompt: "Inclusive language in UX copy…",
+    options: [
+      "Avoids unnecessary bias and overly narrow assumptions",
+      "Requires removing all pronouns",
+      "Forbids Plain Language",
+      "Is only for marketing sites",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-10",
+    prompt: "Confirmation dialogs for risky actions should…",
+    options: [
+      "Use identical labels for confirm/cancel",
+      "MakeCancel vs confirm visually and verbally distinct",
+      "Never explain impact",
+      "Auto-dismiss in 1 second",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-11",
+    prompt: "Plain language guidelines suggest…",
+    options: [
+      "Long clauses and passive voice",
+      "Short sentences and common words when possible",
+      "Removing all numbers",
+      "No contractions ever in any product",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-12",
+    prompt: "Onboarding copy is effective when it…",
+    options: [
+      "Explains value and sets expectations without overwhelming",
+      "Lists every feature alphabetically",
+      "Hides pricing",
+      "Uses only tooltips",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-13",
+    prompt: "Label case choices (sentence vs title) should…",
+    options: [
+      "Mix randomly per screen",
+      "Follow a defined style guide consistently",
+      "Always be ALL CAPS",
+      "Depend only on engineering defaults",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-14",
+    prompt: "Alt text and UX writing overlap when…",
+    options: [
+      "Decorative images need empty alt in context",
+      "All images need long marketing stories in alt",
+      "Buttons never need names",
+      "Icons never pair with text",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-15",
+    prompt: "A successful form field hint…",
+    options: [
+      "Duplicates the label verbatim",
+      "Clarifies format or constraints without replacing the label",
+      "Only works as placeholder alone",
+      "Must include jokes",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "ux-16",
+    prompt: "Voice and tone guides help teams…",
+    options: [
+      "Align wording with brand personality in different contexts",
+      "Ban all user research",
+      "Standardize on Lorem ipsum",
+      "Avoid localization",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-17",
+    prompt: "Success toasts/notices should…",
+    options: [
+      "Be specific enough to confirm what completed",
+      "Always say “Success!” only",
+      "Stay forever on screen",
+      "Use red text",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "ux-18",
+    prompt: "Testing copy with real tasks helps catch…",
+    options: [
+      "Only typos, never confusion",
+      "Mismatch between words and user mental models",
+      "Only color contrast",
+      "Only backend latency",
+    ],
+    correctIndex: 1,
+  },
+];

@@ -1,0 +1,32 @@
+export type QuizModuleId = "chess" | "angular" | "accessibility" | "ux-copy";
+
+export type SourceQuestion = {
+  id: string;
+  prompt: string;
+  options: [string, string, string, string];
+  /** Index into `options` for the single correct choice (before any shuffle). */
+  correctIndex: 0 | 1 | 2 | 3;
+};
+
+export type SessionQuestion = {
+  id: string;
+  prompt: string;
+  options: string[];
+  correctIndex: number;
+};
+
+export type QuizModule = {
+  id: QuizModuleId;
+  title: string;
+  shortDescription: string;
+  explainer: string;
+  chatgptPrompts: string[];
+  questionPool: SourceQuestion[];
+};
+
+export type AnswerRecord = {
+  questionId: string;
+  selectedIndex: number;
+  confidence: 1 | 2 | 3 | 4 | 5;
+  isCorrect: boolean;
+};
