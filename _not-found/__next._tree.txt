@@ -1,2 +1,2 @@
-:HL["/learn-aidd/_next/static/chunks/0615oh61xx7~e.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Op3O3XPSjrl0elT_FtUKf"}
+:HL["https://henrikmathiesen.github.io/learn-aidd/_next/static/chunks/15p3d8zave_zo.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"CVyE5yQ5xcxsFs_WoXxaZ"}
