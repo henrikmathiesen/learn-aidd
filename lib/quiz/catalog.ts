@@ -28,7 +28,7 @@ const modules: QuizModule[] = [
     id: "angular",
     title: "Angular",
     shortDescription: "Components, DI, templates, and modern Angular patterns.",
-    explainer: `Angular combines structured components, dependency injection, and a rich template system (including signals in modern versions). This quiz emphasizes practical distinctions: structural directives, services, routing basics, forms bridges, and change detection at a high level. Questions are randomized from a pool; focus on reasoning, not memorizing option order.`,
+    explainer: `Angular combines structured components, dependency injection, and a rich template system (including signals in modern versions). This quiz emphasizes practical distinctions: structural directives, services, routing basics, forms bridges, and change detection at a high level.`,
     chatgptPrompts: [
       "Compare Default vs OnPush change detection with a small component example.",
       "Explain when to use signals vs RxJS in a new Angular feature.",

@@ -84,9 +84,8 @@ export function QuizFlow({ module }: { module: QuizModule }) {
             ))}
           </div>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            You will answer {questionsPerModule} multiple-choice questions. Each has exactly four options—one correct
-            and three incorrect—and those options are shuffled every time. After each question, rate how confident you
-            felt (1–5).
+            You will answer {questionsPerModule} multiple-choice questions. Each has four options, one correct and three
+            incorrect. After each question, rate how confident you felt.
           </p>
           <button
             type="button"
@@ -178,12 +177,6 @@ export function QuizFlow({ module }: { module: QuizModule }) {
             >
               {isLast ? "See results" : "Next question"}
             </button>
-            <Link
-              href="/"
-              className="inline-flex items-center rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium text-zinc-800 hover:bg-zinc-50 dark:border-zinc-600 dark:text-zinc-100 dark:hover:bg-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
-            >
-              Exit to modules
-            </Link>
           </div>
         </div>
       )}
@@ -278,10 +271,6 @@ export function QuizFlow({ module }: { module: QuizModule }) {
               All modules
             </Link>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-500">
-            Tip: “Same module — reshuffle” draws a new random question set and shuffles answer order again. You can also
-            refresh the page.
-          </p>
         </div>
       )}
     </div>
