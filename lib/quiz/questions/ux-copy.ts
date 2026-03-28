@@ -105,7 +105,7 @@ export const uxCopyQuestions: SourceQuestion[] = [
     prompt: "Confirmation dialogs for risky actions should…",
     options: [
       "Use identical labels for confirm/cancel",
-      "MakeCancel vs confirm visually and verbally distinct",
+      "Make cancel vs confirm visually and verbally distinct",
       "Never explain impact",
       "Auto-dismiss in 1 second",
     ],

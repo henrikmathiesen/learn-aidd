@@ -12,9 +12,9 @@ export default function Home() {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
       <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Choose a module</h1>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-        Each topic opens with a quick explainer, then ten questions sampled at random from a larger pool. Confidence
-        ratings help you notice gaps between what you know and what feels uncertain—without giving away correct answers
-        by position.
+        Each topic starts with a short explainer, then ten four-option multiple-choice questions (one correct, three
+        incorrect) sampled at random from a larger pool. Confidence ratings help you spot uncertainty without learning
+        a fixed “slot” for the right answer.
       </p>
 
       <ul className="mt-8 grid gap-4 sm:grid-cols-2" role="list">

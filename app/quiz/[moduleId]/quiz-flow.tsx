@@ -84,8 +84,9 @@ export function QuizFlow({ module }: { module: QuizModule }) {
             ))}
           </div>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            You will answer {questionsPerModule} multiple-choice questions. After each one, rate how confident you
-            felt (1–5). Correct answers are mixed randomly each session.
+            You will answer {questionsPerModule} multiple-choice questions. Each has exactly four options—one correct
+            and three incorrect—and those options are shuffled every time. After each question, rate how confident you
+            felt (1–5).
           </p>
           <button
             type="button"

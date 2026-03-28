@@ -1,8 +1,14 @@
 import type { QuizModule, QuizModuleId } from "./types";
+import { validateQuestionPool } from "./validate-source-question";
 import { chessQuestions } from "./questions/chess";
 import { angularQuestions } from "./questions/angular";
 import { accessibilityQuestions } from "./questions/accessibility";
 import { uxCopyQuestions } from "./questions/ux-copy";
+
+validateQuestionPool(chessQuestions, "chess");
+validateQuestionPool(angularQuestions, "angular");
+validateQuestionPool(accessibilityQuestions, "accessibility");
+validateQuestionPool(uxCopyQuestions, "ux-copy");
 
 const modules: QuizModule[] = [
   {

@@ -1,18 +1,23 @@
 export type QuizModuleId = "chess" | "angular" | "accessibility" | "ux-copy";
 
+/** Four-option multiple choice: exactly one correct index, three incorrect distractors. */
+export type FourChoices = [string, string, string, string];
+
+export type ChoiceIndex = 0 | 1 | 2 | 3;
+
 export type SourceQuestion = {
   id: string;
   prompt: string;
-  options: [string, string, string, string];
+  options: FourChoices;
   /** Index into `options` for the single correct choice (before any shuffle). */
-  correctIndex: 0 | 1 | 2 | 3;
+  correctIndex: ChoiceIndex;
 };
 
 export type SessionQuestion = {
   id: string;
   prompt: string;
-  options: string[];
-  correctIndex: number;
+  options: FourChoices;
+  correctIndex: ChoiceIndex;
 };
 
 export type QuizModule = {

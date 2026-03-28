@@ -1,5 +1,6 @@
 import type { SessionQuestion, SourceQuestion } from "./types";
 import { shuffle, shuffleOptions } from "./shuffle";
+import { validateSourceQuestion } from "./validate-source-question";
 
 const questionsPerModule = 10;
 
@@ -9,6 +10,7 @@ export const buildSessionQuestions = (
 ): SessionQuestion[] => {
   const picked = shuffle([...pool], random).slice(0, questionsPerModule);
   return picked.map((q) => {
+    validateSourceQuestion(q);
     const { options, correctIndex } = shuffleOptions(q.options, q.correctIndex, random);
     return {
       id: q.id,
