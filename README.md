@@ -37,3 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Following along
 https://medium.com/effortless-programming/how-to-learn-to-build-apps-in-2025-2293d340886b
+
+## Deployed at
+https://learn-aidd-eight.vercel.app/
